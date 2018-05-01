@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if 'DJANGO_DEBUG_FALSE' in os.environ:
     DEBUG = False
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'j#mqq(5)3-o4$271d_)j!au$o8j-v_3gol(%p^+$8gb*^y^66+'
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
     ALLOWED_HOSTS = [os.environ['SITENAME']]
 else:
     # SECURITY WARNING: don't run with debug turned on in production!
