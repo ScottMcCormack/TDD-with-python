@@ -30,7 +30,7 @@ class ItemValidationTest(FunctionalTest):
         # He tries again with some text for the item, which now works
         self.browser.find_element_by_id('id_new_item').send_keys('Buy milk')
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy Milk')
+        self.wait_for_row_in_list_table('1: Buy milk')
 
         # Perversely, he now decides to submit a second blank list item
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
@@ -44,7 +44,7 @@ class ItemValidationTest(FunctionalTest):
         # And he can now correct it by filling some text in
         self.browser.find_element_by_id('id_new_item').send_keys('Make tea')
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
-        self.wait_for_row_in_list_table('1: Buy Milk')
+        self.wait_for_row_in_list_table('1: Buy milk')
         self.wait_for_row_in_list_table('2: Make tea')
 
 
