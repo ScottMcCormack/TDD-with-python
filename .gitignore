@@ -104,4 +104,4 @@ virtualenv/
 db.sqlite3
 .idea/
 
-static/
+/static
